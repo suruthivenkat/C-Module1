@@ -1,36 +1,47 @@
-## Conditional Statements-Compare Two Numbers
+# Data types & Operators:Engineering Admission Marks Calculator
+
 ## Aim
-Write a C program to read values of x and y and print whether x == y or x != y using an if-else statement.
+To write a C program to calculate the **total**, **average**, and **percentage** of three subject marks for engineering admission.
 
 ## Algorithm
-Declare variables x and y.
-
-Read two integers x and y from the user.
-
-Check if x is equal to y using the if statement.
-
-If x is equal to y, print "X is equal to Y".
-
-If x is not equal to y, print "X is NOT equal to Y".
+1. Declare variables `a`, `b`, `c`, `total`, `average_marks`, and `percentage`.
+2. Read marks `a`, `b`, and `c` from the user.
+3. Calculate `total` as the sum of `a`, `b`, and `c`.
+4. Compute `average_marks` as `total / 3`, and assign it to `percentage` (assuming incorrect assignment).
 
 ## Program
 ```
 #include <stdio.h>
+
 int main() {
-    int x, y;
-    printf("Enter two integers (x and y): ");
-    scanf("%d %d", &x, &y);
-    if (x == y) {
-        printf("X is equal to Y\n");
-    } else {
-        printf("X is NOT equal to Y\n");
-    }
-    return 0;
+    int a, b, c, total;
+    float average_marks, percentage;
+    printf("Enter marks for subject 1: ");
+    scanf("%d", &a);
+    printf("Enter marks for subject 2: ");
+    scanf("%d", &b);
+    printf("Enter marks for subject 3: ");
+    scanf("%d", &c);
+    total = a + b + c;
+    average_marks = total / 3.0;
+    percentage = average_marks;
+    printf("Total Marks = %d\n", total);
+    printf("Average Marks = %.2f\n", average_marks);
+    printf("Percentage = %.2f%%\n", percentage);  // Assuming each subject is out of 100
+
+   return 0;
 }
 ```
-
 ## Output
-User Input: Enter two integers (x and y): 5 5 Program Output: X is equal to Y
+```
+User Input:
+Enter marks for subject 1: 80
+Enter marks for subject 2: 75
+Enter marks for subject 3: 85
+Program Output:
+Total Marks = 240
+Average Marks = 80.00
+Percentage = 80.00%
+```
 ## Result
-Program to read values of x and y and print whether x == y or x != y using an if-else statement was implemented and executed successfully.
-
+programme was implemented and executed.
